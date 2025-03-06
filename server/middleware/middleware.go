@@ -12,7 +12,7 @@ import (
 func GetAllTask(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Context-Type", "application/x-www-form-urlencoded")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
-	payload := controller.getAllTask()
+	payload := controller.GetallTask()
 	json.NewEncoder(w).Encode(payload)
 }
 
@@ -23,7 +23,7 @@ func CreateTask(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 	var task models.ToDoList
 	json.NewDecoder(r.Body).Decode(&task)
-	controller.createTask(task)
+	controller.Createtask(task)
 	json.NewEncoder(w).Encode(task)
 }
 
@@ -33,7 +33,7 @@ func CompleteTask(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Methods", "PUT")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 	params := mux.Vars(r)
-	controller.completeTask(params["id"])
+	controller.Completetask(params["id"])
 	json.NewEncoder(w).Encode(params["id"])
 }
 
@@ -43,7 +43,7 @@ func UndoTask(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Methods", "PUT")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 	params := mux.Vars(r)
-	controller.undoTask(params["id"])
+	controller.Undotask(params["id"])
 	json.NewEncoder(w).Encode(params["id"])
 }
 
@@ -53,8 +53,11 @@ func EditTask(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Methods", "PUT")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 	params := mux.Vars(r)
-	controller.editTask(params["id"])
+	var task models.ToDoList
+	json.NewDecoder(r.Body).Decode(&task)
+	controller.Edittask(params["id"], task)
 	json.NewEncoder(w).Encode(params["id"])
+	json.NewEncoder(w).Encode(task)
 }
 
 func DeleteTask(w http.ResponseWriter, r *http.Request) {
@@ -63,12 +66,12 @@ func DeleteTask(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Methods", "DELETE")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 	params := mux.Vars(r)
-	controller.deleteTask(params["id"])
+	controller.Deletetask(params["id"])
 }
 
 func DeleteAll(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Context-Type","application/x-www-form-urlencoded")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
-	count := controller.deleteAll()
+	count := controller.Deleteall()
 	json.NewEncoder(w).Encode(count)
 }
