@@ -85,6 +85,12 @@ Deletes the task from the DB at the given ID
 
 Updates the task in the DB to the new task value at the given ID without changing the ID or Status
 
+```json
+{
+  "task" : "Updated Sample Task"
+}
+```
+
 #### Delete All Task
 
 ```http
@@ -132,7 +138,7 @@ Deletes all the task from the DB
 * Create a Collection in the Database 
 * Connect to the Connection
 * Update the data in the .env file 
-Refer to [Environment Variable](#Environment-Variable) section for more details on creating the .env file
+Refer to Environment Variables section for more details on creating the .env file
 
 #### Start the server
 * Make sure to update the path to .env in connect.go
