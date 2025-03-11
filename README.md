@@ -6,9 +6,13 @@ The app allows users to create, edit, delete, and mark tasks as completed. It fo
 Refer to the [Tech Stack](#Tech-Stack) section for list of technologies used in this project
 ## Project Structure
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Server Side](https://uml.planttext.com/plantuml/svg/TP1H2iCm243_SugG0_GClKgeRWIiWh7Tn-ZTrydMCPBu-HvFqBbQLjjM2ZSXG8sfekweAJv3FETB5s5J8VePjuNG7UDYqrrIQpxL9O-_jMikt2vyqr5G00WVMR6JNMuK2o3LJkXy4AbirhlQUHEvcf3t58um8yFvsXS0)
 
+![Client Side](https://uml.planttext.com/plantuml/svg/VP513i8W44Ntd8AmhsUePz2zgJ2D69WXp93KcDvTRDBOAf7bcvS_7-XPXYmb1ZLIS92r6JEX03gZdqhNit8a1vT8hWHWivkaSWtUxXbdkmPiiQMO2065jzF5y06qoO13XAwk6SBXpfDfE4AEEYyG_mfy0v2zCV_KONcyRzEiSguffoN4CZT35ksOKjrYlgX71rE3Poe2_AargrdrzR7h1xm0)
 
+![Frontend Workflow](https://uml.planttext.com/plantuml/svg/VLJ1Rjf04BtlLunoQ44gxJs7AYGk2HLEQ03r4EKmiWVYikowE-kcKPL_x-mQ1uC3790zdlVcpSo-lM2FpbSRhNpXDS4zOUO7rtOmjuc5aRF6aydXftNhfRRFIibdws31v9Hob7aqAu6TfLWO69QbBZBqXJLdy4-1_1uazlaNFy9Wy1KUvZQtioSYBw6_Zt0kvKnEZk7ARafho7ZrkaSRLKmAzhiCVgC-O7khCFQqQGfCaPaOGXWIz7WSAL9mGwdDKJVWkv8CG_q1aWArNHtectdq12aQND56n9tIrgkOOdvVg6i8ms8CCNOIzMsvb981TeCcrmAR5Jb17UQJq1yLkPTF84zfvUDc0is8VFOaD1zWKUPIdUlPxFSsd8vXWY_aeETi9Kc1kNzo-hkyCBuhr9eXq8mgauNQBQsx9Hr5YiHiFKTUz_hIWSbj_LnpTDPrb8RomhUGyQ_LvYLcwt34HMVJMopGfehSrtOYa90Nk6U2ORYPpwToG7vNnDj5H6mxDM9JQrOskOn0yKyS_JrvLz2VPlW1-7gmWc0p6DQZQyJ5M2Hjh7KE4uiYHjuFCZf-6-QITqlFqH3l9BUjaw9RCw384z_15qX8azzwwG3wZdVgq3PRkleOkuIHN2BohPGHY5tYWLJTSUsliHxrzzdThI1PRW4crLrFfzVcQ2_6Ibq8XLno_m40)
+
+![Backend Workflow](https://uml.planttext.com/plantuml/svg/VP9DJy9048Rl_HKJJdhe7_1W00cW0SLImy5uM9QnRYWxTNQgCSR_xkv2mJR47hlFFE-x7tqdYgNUbOaOAH4oL5hI2QKvZGY6Ic_HRc15l7qjwJD9_2enF3da967KecpXftfZ9Yk172nkuKQLfUl1TmB-2oYawJKyJsZcwK2ym1KiFUrWckSBd_bUenEN_BIS1tw5Qm_p1tAZR9cYEgDQa8DshaI_eOFuPqytYv6SAhifaLrWOqyOL1LJnKO9mhYsMWpPJfDXxOn5vs16XT4mKrz-JnUDwlBOwoIFMRbosz3SQ0nn2oRj9NZGT396IjHQETpRZygM8rhdP0iQ3OFniKOstXTcz_XnyLo13ALcUy3RwHcwYgnFZrimjlYdmDyZtDzYCtts5DhNFYRUAUcET2yqFffJuRlbm_rfmZVl-rZ_Pdy1)
 ## API Reference
 
 #### Get all Tasks
@@ -85,12 +89,6 @@ Deletes the task from the DB at the given ID
 
 Updates the task in the DB to the new task value at the given ID without changing the ID or Status
 
-```json
-{
-  "task" : "Updated Sample Task"
-}
-```
-
 #### Delete All Task
 
 ```http
@@ -138,7 +136,7 @@ Deletes all the task from the DB
 * Create a Collection in the Database 
 * Connect to the Connection
 * Update the data in the .env file 
-Refer to Environment Variables section for more details on creating the .env file
+Refer to [Environment Variable](#Environment-Variable) section for more details on creating the .env file
 
 #### Start the server
 * Make sure to update the path to .env in connect.go
@@ -167,7 +165,7 @@ To run this project, you will need to add the following environment variables to
 
 ## Test Docs
 
-[Testing Documentation](https://linktodocumentation)
+[Testing Documentation](https://docs.google.com/document/d/e/2PACX-1vSB0FIBIncdmjMjdoAFneWWfq94eJmtkPw1qOAXbyMVy4a7i7K5ZPPlgeYe4u_3WOlF6LczfqX1d9RW/pub)
 
 
 ## Tech-Stack
@@ -183,6 +181,5 @@ To run this project, you will need to add the following environment variables to
 The Project is based on the Golang React ToDo list project by Akhil Sharma 
 
 Follow the link to the original Video
- 
- [GOLANG REACT TODO APP](https://youtu.be/8mEC1X5yLjY?si=o3H2JzuI_PmVRlLg)
+ - [GOLANG REACT TODO APP](https://youtu.be/8mEC1X5yLjY?si=o3H2JzuI_PmVRlLg)
 
