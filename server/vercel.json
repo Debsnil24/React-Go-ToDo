@@ -1,10 +1,4 @@
 {
-    "projects": [
-      {
-        "name": "go-backend",
-        "root": "server"
-      }
-    ],
     "builds": [
       { "src": "server/main/main.go", "use": "@vercel/go" }
     ],
