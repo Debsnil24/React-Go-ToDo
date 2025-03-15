@@ -14,7 +14,7 @@ func main() {
 	r := router.Router()
 	fmt.Println("Starting the server on port 9000")
 
-	err := http.ListenAndServe(port, r)
+	err := http.ListenAndServe(":"+port, r)
 	if err != nil {
 		log.Fatalf("Error: Unable to start Webserver at port 9000 \n %v", err)
 	}
